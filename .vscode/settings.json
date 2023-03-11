@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/aa0a8c3e-f346-488a-8a2c-bde6faf69dd9/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/nodejs-alperalanyali",
+    "appService.deploySubpath": "."
+}
