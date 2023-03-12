@@ -3,6 +3,7 @@ const cors = require('cors');
 const connection = require('./database/database');
 const Todo = require('./models/todo');
 
+const todoRouter = require('./router/todo');
 //Connection to Mongoose
  connection();
 
@@ -17,15 +18,16 @@ app.get('/test',(req,res)=>{
     })
 })
 
+app.use("/api/v1/todo",todoRouter);
 
-app.get('/api/todo/getall',async (req,res)=>{
-   const todos = await Todo.find();
+// app.get('/api/todo/getall',async (req,res)=>{
+//    const todos = await Todo.find();
    
-    res.json({
-        results:todos.length,
-        data:todos
-    })
-});
+//     res.json({
+//         results:todos.length,
+//         data:todos
+//     })
+// });
 
 const port = process.env.PORT || 3000
 
